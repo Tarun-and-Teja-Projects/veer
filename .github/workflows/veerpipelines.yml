@@ -1,20 +1,52 @@
-name: Deploy to Firebase Hosting on Push
 
-on: 
-  push: 
+name: Deploy to Production Website
+
+on:
+  push:
     branches:
-      - main   
+      - main
 
 jobs:
-  build_and_deploy:
+  DeployToProductionWebsite:
     runs-on: ubuntu-latest
     steps:
-    
-      
-      # Step 5: Deploy to Firebase Hosting
-      - name: Deploy to Production Website
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # - name: SonarQube Scan
+      #   uses: sonarsource/sonarcloud-github-action@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #   with:
+      #     args: >
+      #       -Dsonar.organization=jacob-websites
+      #       -Dsonar.projectKey=Jacob-Websites_JacobWebsite
+      #       -Dsonar.projectName="JacobWebsite"
+      #     projectBaseDir: .
+
+      - name: Upload code artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: JSSW Production Code
+          path: .
+
+  release-project:
+    runs-on: ubuntu-latest
+    environment:
+      name: Prod
+    needs: DeployToProductionWebsite
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: JSSW Production Code
+          path: .
+
+      - name: Deploying to Production Website
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_1_CD7E8 }}
+          channelId: live
           projectId: test-1-cd7e8
