@@ -1,3 +1,15 @@
+p{
+font-size:14px!important;
+}
+
+.it {
+    background: #e70100;
+    display: inline-block;
+    padding: 0px 4px 0 12px;
+    color: #fff;
+    letter-spacing: 9.2px;
+    border-radius: 4px;
+}
 .sicons {
 	width: 60px;
 	height: 60px;
@@ -821,7 +833,7 @@ banner
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 36px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 800;
   color: #333;
   letter-spacing: 1px;
