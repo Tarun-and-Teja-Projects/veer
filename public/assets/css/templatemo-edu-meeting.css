@@ -60,7 +60,7 @@ font-size:14px!important;
     color: #0000007a;
 }
 .card-header_num {
-	color: #000;
+	color: #ED0100;
     font-weight: bold;
 }
 .card-body {
@@ -163,7 +163,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 @font-face {
   font-family: basefont;
-  src: url(../fonts/FallingSkyLight-K2EX.otf);
+  src: url(../fonts/basefont.otf);
 }
  body {
   font-family: basefont;
@@ -999,7 +999,7 @@ section.upcoming-meetings {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 750px;
+  padding-top: 530px;
   padding-bottom: 110px;
 }
 
