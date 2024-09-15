@@ -1998,6 +1998,9 @@ a,
 }
 .Carousel img {
 	margin-bottom: 30px;
+	border: 1px #ccc solid;
+    border-radius: 4px;
+	 box-shadow: 0 4px 6px rgba(32, 33, 36, .28);
 }
 .Carousel {
   --carousel-gap: 1rem;
