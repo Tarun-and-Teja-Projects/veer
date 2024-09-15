@@ -1,6 +1,6 @@
 
 name: Deploy to Production Website
-run-name: ${{ github.actor }} is sending to Production 🚀
+run-name: ${{ github.actor }} ${{ github.event.workflow_run.head_commit.message }}
 
 on:
   push:
