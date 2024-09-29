@@ -72,6 +72,8 @@ width:auto;
 .card-body {
    
     color: #000000!important;
+     hyphens:auto;-webkit-hyphens: auto;word-break: break-word;overflow-wrap: break-word;white-space: pre-line;margin: auto;
+     text-wrap: balance;
    
 }
 .card {
@@ -1107,7 +1109,7 @@ section.upcoming-meetings .categories .main-button-red a {
 
 .meeting-item .down-content {
   background-color: #fff;
-  padding: 30px;
+  padding: 15px!important;
   min-height: 200px;	
 /*
   border-bottom-right-radius: 20px;
@@ -1143,6 +1145,7 @@ section.upcoming-meetings .categories .main-button-red a {
   display: inline-block;
   margin-bottom: 15px;
 	min-height: 43px;
+  text-wrap: balance;
 }
 
 .meeting-item .down-content p {
