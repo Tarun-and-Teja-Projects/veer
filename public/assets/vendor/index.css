@@ -18,3 +18,11 @@ b, strong {
 .btn {
   height: 36px;
 }
+@media(max-width:600px){
+  .hstack {
+    flex-direction: column !important;
+    margin-top: 10px;
+    height: auto;
+  }
+
+}
