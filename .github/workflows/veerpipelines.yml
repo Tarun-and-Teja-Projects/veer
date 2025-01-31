@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Zip code artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: VEER Production Code
           path: .
@@ -22,7 +22,7 @@ jobs:
     needs: DeployToProductionWebsite
     steps:
       - name: unzip code artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: VEER Production Code
           path: .
