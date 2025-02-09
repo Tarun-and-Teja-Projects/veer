@@ -16,6 +16,7 @@
 .text-muted {
   --bs-text-opacity: 1;
   color: rgb(256 256 256 / 50%) !important;
+  line-height: 28px!important;
 }
 body {
   min-height: 100vh;
